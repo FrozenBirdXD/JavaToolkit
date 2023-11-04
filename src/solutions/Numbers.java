@@ -1,3 +1,4 @@
+package solutions;
 public class Numbers {
 
     // Main method for testing
@@ -6,7 +7,7 @@ public class Numbers {
         // System.out.println(digitsInNumber(0));
         // System.out.println(sumOfDigitsInNumber(-12345));
         // System.out.println(getLastDigit(124));
-        // System.out.println(reverseDigitsInNumber(-12345));
+        // System.out.println(reverseDigitsInNumber(1));
     }
 
     public static int reverseDigitsInNumber(int number) {
@@ -32,6 +33,9 @@ public class Numbers {
     }
 
     public static int digitsInNumber(int number) {
+        if (number == 0) {
+            return 1;
+        }
         number = getAbsoluteValue(number);
         int numDigits = 0;
         for (int num = number; num > 0; num /= 10) {
@@ -41,6 +45,7 @@ public class Numbers {
     }
 
     public static int getLastDigit(int number) {
+        number = getAbsoluteValue(number);
         return number % 10;
     }
 
