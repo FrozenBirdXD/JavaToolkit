@@ -4,8 +4,25 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class NumbersTest {@Test
+public class NumbersTest {
 
+    @Test
+    public void testFactorialOfPositiveNumber() {
+        assertEquals(1, Numbers.factorial(0));
+        assertEquals(1, Numbers.factorial(1));
+        assertEquals(2, Numbers.factorial(2));
+        assertEquals(24, Numbers.factorial(4));
+        assertEquals(120, Numbers.factorial(5));
+        assertEquals(2432902008176640000L, Numbers.factorial(20));
+        assertThrows(IllegalArgumentException.class, () -> {
+            Numbers.factorial(-1);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            Numbers.factorial(26);
+        });
+    }
+
+    @Test
     public void testIsArmstrongNumber() {
         assertTrue(Numbers.isArmstrongNumber(0));
         assertTrue(Numbers.isArmstrongNumber(1));
