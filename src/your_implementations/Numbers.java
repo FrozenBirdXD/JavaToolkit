@@ -7,6 +7,16 @@ public class Numbers {
         
     }
 
+    // Return the factorial of a number.
+    // 5 -> (5 * 4 * 3 * 2 * 1) -> 120
+    // Negative numbers and numbers bigger than 25 should throw an 
+    // IllegalArgumentException, since negative factorials aren't defined
+    // and factorials of numbers bigger than 25 are bigger than 
+    // the datatype 'long' can fit
+    public static long factorial(int num) {
+        return -1;
+    }
+
     // Determine whether a given number is an Armstrong number or not. 
     // An Armstrong number (narcissistic number) is a number that is equal 
     // to the sum of its own digits raised to the power of the number of digits.
