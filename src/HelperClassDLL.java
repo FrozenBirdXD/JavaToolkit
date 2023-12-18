@@ -1,5 +1,5 @@
 import java.util.Iterator;
-
+// https://github.com/FrozenBirdXD/JavaToolkit/blob/master/src/HelperClassDLL.java
 // leicht veränderte Version von pgdp2324w06p01-solution; 
 public class HelperClassDLL<T> implements Iterable<HelperClassDLL<T>.DoublyLinkedListElement> {
     private DoublyLinkedListElement head;
